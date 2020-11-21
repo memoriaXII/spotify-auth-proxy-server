@@ -12,25 +12,8 @@ app.get("/login", function (req, res) {
       querystring.stringify({
         response_type: "code",
         client_id: process.env.SPOTIFY_CLIENT_ID,
-        scope: [
-          "user-read-recently-played",
-          "user-library-read",
-          "user-top-read",
-          "user-modify-playback-state",
-          "user-read-currently-playing",
-          "user-read-playback-state",
-          "user-follow-modify",
-          "user-follow-read",
-          "user-read-private",
-          "user-read-email",
-          "ugc-image-upload",
-          "playlist-modify-private",
-          "playlist-read-collaborative",
-          "playlist-read-private",
-          "playlist-modify-public",
-          "streaming",
-          "app-remote-control",
-        ],
+        scope:
+          "user-read-recently-played user-library-read user-top-read user-modify-playback-state user-read-currently-playing user-read-playback-state user-follow-modify user-follow-read user-read-private user-read-email ugc-image-upload playlist-modify-private playlist-read-collaborative playlist-read-private playlist-modify-public streaming app-remote-control",
         redirect_uri,
       })
   )
